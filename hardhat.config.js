@@ -5,6 +5,14 @@ module.exports = {
   zksolc: {
     version: "1.3.9",
     compilerSource: "binary",
+    defaultNetwork: 'sepolia',
+    networks: {
+      hardhat: {},
+      sepolia: {
+        url: "https://rpc.ankr.com/eth_sepolia",
+        accounts: [""]
+      }
+    },
     settings: {
       optimizer: {
         enabled: true,
@@ -26,8 +34,8 @@ module.exports = {
     },
   },
   paths: {
-    artifacts: "./artifacts-zk",
-    cache: "./cache-zk",
+    artifacts: "./artifacts",
+    cache: "./cache",
     sources: "./contracts",
     tests: "./test",
   },
